@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      div,
+      input,
+      textarea,
+      span,
+      h1,
+      h2,
+      h3 {
+        font-family: "Open Sans", verdana, "sans-sarif";
+      }
+      #mainDiv {
+        background-color: azure;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      #mainDiv-caption {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* only used for background overlay not needed for centering */
+      form:before {
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: #24323d;
+        z-index: -1;
+        border-radius: 0px;
+        box-shadow: 4px 4px 7px #ccc;
+        padding: 10px;
+      }
+      input {
+        background: transparent !important;
+        color: #8e979e !important;
+        font-weight: bold;
+        border: 1.5px solid white !important;
+        border-radius: 0px !important;
+      }
+
+      /* Place Holder CSS */
+      .label {
+        position: relative;
+        display: inline-block;
+        width: 48%;
+      }
+      .label:hover span {
+        display: none;
+      }
+      input[type="text"]:focus,
+      input[type="text"]:active {
+        /*z-index: -1000000;*/
+      }
+      .label input[type="text"] {
+        position: relative;
+      }
+      .title {
+        color: #8e979e;
+        position: absolute;
+        line-height: 1.5;
+        left: 0.75rem;
+        top: 0.375rem;
+        font-weight: bold;
+        z-index: 1;
+      }
+      .symbol {
+        color: #1ab188;
+      }
+      ::-webkit-input-placeholder {
+        background: -webkit-linear-gradient(
+          left,
+          #aaa 0%,
+          #aaa 40%,
+          #1ab188 46%,
+          #1ab188 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .placeholderActive {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -999999;
+      }
+      /* Place Holder CSS */
+      .btn-avb {
+        width: 50%;
+        font-size: 1.5rem;
+        border-right-width: 0px;
+        padding: 6px;
+      }
+
+      #msgContainerDiv {
+        position: absolute;
+        display: block;
+        height: auto;
+        max-height: 250px;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        z-index: 100;
+      }
+
+      .alert-danger > span {
+        font-weight: bold;
+        font-style: italic;
+      }
+      .disable {
+        /* Note: pointer-events not supported by IE10 and under*/
+        pointer-events: none;
+        opacity: 0.4;
+      }
+
+      /* #1AB188  green color used*/
+    </style>
+    <title>Interview</title>
+  </head>
+  <body>
+    <section id="mainDiv" class="min-vh-100">
+      <div id="mainDiv-caption">
+        <div class="container">
+          <div class="row text-white">
+            <div
+              class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4"
+            >
+              <div id="msgContainerDiv"></div>
+              <button class="btn-success btn-md btn-avb">Sign UP</button
+              ><button class="btn-default btn-md btn-avb">Login In</button>
+              <h2 class="display-4 py-2 text-truncate">Sign Up for Free</h2>
+              <div class="px-2">
+                <form
+                  id="formReg"
+                  action=""
+                  method="post"
+                  class="justify-content-center"
+                >
+                  <div class="form-group">
+                    <label class="sr-only">Full Name</label>
+                    <div class="input-group">
+                      <div class="label" style="float: left;">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="firstName"
+                          id="firstName"
+                        />
+                        <span class="title"
+                          >First Name<span class="symbol"> *</span></span
+                        >
+                      </div>
+                      <span class="input-group-addon">&nbsp;&nbsp;</span>
+                      <div class="label" style="float: right;">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="lastName"
+                          id="lastName"
+                        />
+                        <span class="title"
+                          >Last Name<span class="symbol"> *</span></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only">Email</label>
+                    <div class="input-group">
+                      <div class="label" style="width: 98%;">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="email"
+                          id="email"
+                        />
+                        <span class="title"
+                          >Email Address<span class="symbol"> *</span></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only">Password</label>
+                    <div class="input-group">
+                      <div class="label" style="width: 98%;">
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="password"
+                          id="password"
+                        />
+                        <span class="title"
+                          >Set A Password<span class="symbol"> *</span></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <button
+                        type="submit"
+                        class="btn btn-success btn-lg"
+                        style="width: 98%; border-radius: 0px;"
+                      >
+                        GET STARTED
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="./js/user.js"></script>
+<script src="./js/initApp.js"></script>
+<script src="./js/Util.js"></script>
+<script src="./js/buttonEventListner.js"></script>
+
+<script>
+  var bELAAM = buttonEventListnerAndAssociatedMethod;
+  bELAAM.attachEvent("formReg", "submit", bELAAM.submitRegisterMethod);
+  // var User = new User();
+  // console.log(User);
+</script>
