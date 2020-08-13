@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      div,
+      input,
+      textarea,
+      span,
+      h1,
+      h2,
+      h3 {
+        font-family: "Open Sans", verdana, "sans-sarif";
+      }
+      #mainDiv {
+        background-color: azure;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      #mainDiv-caption {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      #msgContainerDiv {
+        position: absolute;
+        display: block;
+        height: auto;
+        max-height: 250px;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        z-index: 100;
+      }
+
+      .alert-danger > span {
+        font-weight: bold;
+        font-style: italic;
+      }
+      .disable {
+        /* Note: pointer-events not supported by IE10 and under*/
+        pointer-events: none;
+        opacity: 0.4;
+      }
+
+      /* #1AB188  green color used*/
+      .bg-harman {
+        background-color: #f15e33;
+      }
+      .childWrapper {
+        position: relative;
+        border: 1px solid #ccc;
+        margin-top: 50px;
+      }
+      .childWrapper:nth-child(2) {
+        margin-top: 10px;
+        border-color: transparent;
+        text-align: left;
+      }
+      .childWrapper:nth-child(2) button {
+        border: 1px solid #ccc;
+      }
+      .childWrapper .btn-group,
+      .childWrapper .btn-group-vertical {
+        display: inline;
+      }
+      .childWrapper > p,
+      .childWrapper .input-icon {
+        padding: 10px 5px 10px 20px;
+        text-align: left;
+      }
+      .childWrapper .input-icon {
+        padding-left: 8px;
+        text-align: left;
+      }
+      .childWrapper > p span {
+        color: #f15e33;
+        font-face: bold;
+      }
+
+      .input-icon {
+        position: relative;
+        float: left;
+        text-align: left;
+      }
+
+      .input-icon > i {
+        position: absolute;
+        display: block;
+        transform: translate(0, -50%);
+        top: 50%;
+        pointer-events: none;
+        width: 25px;
+        text-align: center;
+        font-style: normal;
+      }
+
+      .input-icon > input {
+        padding-left: 25px;
+        padding-right: 0;
+      }
+      .popover {
+        position: absolute;
+        display: none;
+        right: 0;
+        left: 0;
+        top: -53px;
+        text-align: center;
+        max-width: 100%;
+        color: #fefefe;
+        background: #424242;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 1em;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .popover:after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        right: calc(10% - 10px);
+        bottom: -10px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #424242;
+        transition-duration: 0.3s;
+        transition-property: transform;
+      }
+      .mainWrapper {
+        position: relative;
+        display: block;
+        border: 1px solid #ccc;
+        height: auto;
+        width: auto;
+        box-shadow: 4px 4px 7px #ccc;
+        padding: 15px;
+      }
+      .whyGive,
+      #whyGive {
+        color: #009dd5;
+        display: none;
+      }
+    </style>
+    <title>Interview</title>
+  </head>
+  <body>
+    <p>Note: Date Given in 20th August and Money is 210$</p>
+    <section id="mainDiv" class="min-vh-100">
+      <div id="mainDiv-caption">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto p-4">
+              <div id="msgContainerDiv"></div>
+
+              <div class="px-2">
+                <!-- Main Wrapper-->
+                <div class="mainWrapper">
+                  <!-- childWrapper-->
+
+                  <div class="childWrapper">
+                    <span class="popover">Add display Image</span>
+                    <div
+                      class="progress"
+                      style="margin-bottom: 8px; border-radius: 4px;"
+                    >
+                      <!-- Start of Progress-->
+                      <div class="progress-bar bg-harman active"></div>
+                    </div>
+                    <!--end of Progress-->
+                    <p>
+                      <span id="noOfDaysLeft">Only 3 days</span> left to fund
+                      this project.
+                    </p>
+                    <p>
+                      Join the 42 otherdonors who have already supported this
+                      project. Every dollar helps
+                    </p>
+                    <form
+                      id="formCC"
+                      action=""
+                      method="post"
+                      class="form-inline"
+                    >
+                      <div class="form-group mx-sm-2 mb-1">
+                        <div class="input-icon">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="idMoney"
+                            name="idMoney"
+                            placeholder="0.00"
+                            style="width: 60%;"
+                          />
+                          <i>$</i>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary mb-2">
+                        Give Now
+                      </button>
+                    </form>
+                    <p class="whyGive">
+                      why give <span id="whyGive">$50</span>
+                    </p>
+                  </div>
+                  <!-- childWrapper-->
+                  <div class="childWrapper">
+                    <div
+                      class="btn-toolbar"
+                      role="toolbar"
+                      aria-label="Toolbar with button groups"
+                    >
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="1st group"
+                        style="width: 50%;"
+                      >
+                        <button type="button" class="btn btn-light btn-lg">
+                          Save for Later
+                        </button>
+                      </div>
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="2nd group"
+                        style="text-align: right; float: right; width: 50%;"
+                      >
+                        <button type="button" class="btn btn-light btn-lg">
+                          Tell Your Friend
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of wrapper-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+  integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+  crossorigin="anonymous"
+></script>
+<script src="./js/2ndAssignMent/allinone.js"></script>
+
+<script>
+  allInOne.initApp();
+  //   var noOfDayLeft = 0;
+  //   function getRemainingDay(endtime) {
+  //     var t = Date.parse(endtime) - Date.parse(new Date());
+  //     var seconds = Math.floor((t / 1000) % 60);
+  //     var minutes = Math.floor((t / 1000 / 60) % 60);
+  //     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  //     var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  //     return {
+  //       total: t,
+  //       days: days,
+  //       hours: hours,
+  //       minutes: minutes,
+  //       seconds: seconds,
+  //     };
+  //   }
+
+  //   function initProgressBar(id, endtime, starttime) {
+  //     var clock = document.getElementById(id);
+  //     //var daysSpan = clock.querySelector(".days");
+  //     //var hoursSpan = clock.querySelector(".hours");
+  //     //var minutesSpan = clock.querySelector(".minutes");
+  //     //var secondsSpan = clock.querySelector(".seconds");
+
+  //     var $progress = $(".progress-bar");
+
+  //     function updateClock() {
+  //       var t = getRemainingDay(endtime);
+
+  //       var p =
+  //         Math.round(((new Date() - starttime) / (endtime - starttime)) * 100) +
+  //         "%";
+  //       $progress.css("width", p);
+  //       noOfDayLeft = t.days;
+  //       //daysSpan.innerHTML = t.days;
+  //       //hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+  //       //minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+  //       //secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+
+  //       if (t.total <= 0) {
+  //         clearInterval(timeinterval);
+  //       }
+  //     }
+  //     updateClock();
+  //     var timeinterval = setInterval(updateClock, 1000);
+  //   }
+  //   var starttime = new Date("july 1, 2020 23:59:59");
+  //   var deadline = new Date("Aug 20, 2020 23:59:59");
+  //   initProgressBar("clockdiv", deadline, starttime);
+</script>
