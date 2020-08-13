@@ -77,10 +77,9 @@ var allInOne = (function () {
                 const formElem = event.target.elements;
                 if (formElem.idMoney.value > 0 && formElem.idMoney.value < moneyToPay) {
                     document.getElementById("whyGive").innerHTML = "$" + formElem.idMoney.value
-                    document.getElementById("whyGive").style.display = "block";
                     document.querySelector('.whyGive').style.display = 'block';
                 } else {
-                    document.getElementById("whyGive").style.display = "none";
+                    document.querySelector('.popover').style.display = 'none';
                     document.querySelector('.whyGive').style.display = 'none';
                     return false;
                 }
