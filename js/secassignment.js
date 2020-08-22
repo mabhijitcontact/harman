@@ -1,7 +1,7 @@
 var allInOne = (function () {
     var noOfDayLeft = 0;
     var starttime = new Date("july 1, 2020 23:59:59");
-    var deadline = new Date("Aug 20, 2020 23:59:59");
+    var deadline = new Date("Aug 31, 2020 23:59:59");
     var moneyToPay = 210;
     function getRemainingDay(endtime) {
         var t = Date.parse(endtime) - Date.parse(new Date());
