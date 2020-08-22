@@ -1,12 +1,10 @@
 "# harman" 
 
-1st Assignment 
-[go](httphttps://rawgit.com/mabhijitcontact/harman/master/index.html){:target="_blank"}
+ 
+![1st Assignment](httphttps://rawgit.com/mabhijitcontact/harman/master/index.html){:target="_blank" rel="noopener"}
 
-2nd Assignment
-[go](https://rawgit.com/mabhijitcontact/harman/master/2ndAssingment.html){:target="_blank"}
 
-3rd Test Cases (JASMINE STANDALONE)
-[go](https://rawgit.com/mabhijitcontact/harman/master/jasmine/SpecRunner.html){:target="_blank"}
+![2nd Assignment](https://rawgit.com/mabhijitcontact/harman/master/2ndAssingment.html){:target="_blank" rel="noopener"}
 
-[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+
+![3rd Test Cases (JASMINE STANDALONE)](https://rawgit.com/mabhijitcontact/harman/master/jasmine/SpecRunner.html) {:target="_blank" rel="noopener"}
