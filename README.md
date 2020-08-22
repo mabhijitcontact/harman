@@ -1,10 +1,10 @@
 "# harman" 
 
 1st Assignment 
-https://rawgit.com/mabhijitcontact/harman/master/index.html
+[go](httphttps://rawgit.com/mabhijitcontact/harman/master/index.html){:target="_blank"}.
 
 2nd Assignment
-https://rawgit.com/mabhijitcontact/harman/master/2ndAssingment.html
+[go](https://rawgit.com/mabhijitcontact/harman/master/2ndAssingment.html){:target="_blank"}.
 
 3rd Test Cases (JASMINE STANDALONE)
-https://rawgit.com/mabhijitcontact/harman/master/jasmine/SpecRunner.html
+[go](https://rawgit.com/mabhijitcontact/harman/master/jasmine/SpecRunner.html){:target="_blank"}.
