@@ -1,7 +1,7 @@
 "# harman" 
 
  
-[ 1st Assignment ](httphttps://rawgit.com/mabhijitcontact/harman/master/index.html)
+[ 1st Assignment ](httphttps://rawgit.com/mabhijitcontact/harman/master/)
 
 
 [2nd Assignment](https://rawgit.com/mabhijitcontact/harman/master/2ndAssingment.html)
