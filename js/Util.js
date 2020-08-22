@@ -3,6 +3,7 @@ const Validator = (function () {
     var errorMsg = [];
     let htmlMsg = '';
     blankFieldChecking = function (fields) {
+        console.log(fields);
         var whatBlank = [],
             isFieldError = false;
         for (let ii = 0; ii < fields.length; ii++) {
@@ -41,7 +42,7 @@ const Validator = (function () {
     };
 
     passwordLengthChecking = function (fieldVal) {
-        if (fieldVal.length <= 6) {
+        if (fieldVal.length < 6) {
             errorMsg = [];
             errorMsg.push({
                 isError: true,

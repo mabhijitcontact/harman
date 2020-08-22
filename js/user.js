@@ -3,6 +3,7 @@ function User() {
 }
 
 User.prototype.registerUser = function (userObj) {
+    console.log(userObj);
     var isFound = UserObj.findIndex(user => user.email == userObj.email);
     UserObj.push(userObj);
     return new Promise((resolve, reject) => {

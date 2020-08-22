@@ -1,0 +1,113 @@
+form:before {
+  background-color: #f0ffff;
+}
+.alert-danger > span {
+  font-weight: bold;
+  font-style: italic;
+}
+.disable {
+  /* Note: pointer-events not supported by IE10 and under*/
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* #1AB188  green color used*/
+.bg-harman {
+  background-color: #f15e33;
+}
+.childWrapper {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+.childWrapper:nth-child(2) {
+  margin-top: 10px;
+  border-color: transparent;
+  text-align: left;
+}
+.childWrapper:nth-child(2) button {
+  border: 1px solid #ccc;
+}
+.childWrapper .btn-group,
+.childWrapper .btn-group-vertical {
+  display: inline;
+}
+.childWrapper > p,
+.childWrapper .input-icon {
+  padding: 10px 5px 10px 20px;
+  text-align: left;
+}
+.childWrapper .input-icon {
+  padding-left: 8px;
+  text-align: left;
+}
+.childWrapper > p span {
+  color: #f15e33;
+  font-face: bold;
+}
+
+.input-icon {
+  position: relative;
+  float: left;
+  text-align: left;
+}
+
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+}
+
+.input-icon > input {
+  padding-left: 25px;
+  padding-right: 0;
+}
+.popover {
+  position: absolute;
+  display: none;
+  right: 0;
+  left: 0;
+  top: -53px;
+  text-align: center;
+  max-width: 100%;
+  color: #fefefe;
+  background: #424242;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 20px;
+}
+.popover:after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: calc(10% - 10px);
+  bottom: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #424242;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.mainWrapper {
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  height: auto;
+  width: auto;
+  box-shadow: 4px 4px 7px #ccc;
+  padding: 15px;
+}
+.whyGive {
+  color: #009dd5 !important;
+  display: none;
+}
+.whyGive > span {
+  color: #009dd5 !important;
+}
